@@ -28,15 +28,278 @@ IceCube has performed several all-sky searches for point-like neutrino sources. 
 
 \section{The Icecube Neutrino Observatory}
 
+Interactions of neutrinos in IceCube are detected using Cerenkov light
+emitted by relativistic charged secondary particles. To serve this purpose, one
+cubic kilometer of Antarctic ice was instrumented at the South
+Pole~\citep{Achterberg:2006md}. A total of 5160 digital optical modules (DOMs)
+detect light emission in the ice at a depth ranging from 1450 to $2450\:$m. The
+DOMs consist of a photomultiplier tube, electronics for digitization, and LEDs
+for detector calibration \citep{Abbasi:2008aa, Abbasi:2010vc}.  DOMs are
+attached to 86 cables (called \emph{strings}) in groups of 60 with vertical
+spacing of $17\:$m; the mean distance between neighboring strings is
+$\sim125\:\mathrm{m}$.  The eight innermost strings form a denser sub-array
+called \emph{DeepCore} which targets lower energies~\citep{Abbasi:2011ym}. The
+South Pole IceCube Neutrino Observatory includes the surface array called
+\emph{IceTop}~\citep{Abbasi:2012nn} that detects and reconstructs air showers
+above $300\:$TeV using 82 ice tanks. In the analysis presented here, IceTop's
+capabilities are used to veto cosmic-ray-induced backgrounds.
+
+Three event topologies are taken
+into account when considering neutrino interactions in IceCube. \emph{Tracks}
+are induced by muons traversing the detector. Below $700\:$GeV, muons lose
+energy mainly due to ionization; above $700\:$GeV, stochastic energy losses due
+to radiative emission become the dominant component. At TeV energies, muons
+travel long distances, larger than several kilometers in the Antarctic
+ice~\citep{Chirkin:2004hz}. Light is constantly emitted along the track. The
+resulting long lever arm gives a good reconstruction performance with median
+angular resolution $\Delta\Psi<1\deg$i.\footnote{Evaluated using dedicated Monte
+Carlo simulation, verified using experimental data of cosmic-ray shadowing of
+the Moon~\citep{Aartsen:2013zka}.} Moreover, the event rate greatly increases
+because neutrinos can interact far outside the detector prior to the detection
+of the secondary muon with IceCube.  Charged-current interactions of electron
+or tau neutrinos, as well as neutral current interactions of any neutrino type,
+produce \emph{shower}- or \emph{cascade}-like events. These types of
+interactions produce almost spherically symmetric light emission, giving a
+median angular resolution of $\sim$10$\deg$. Another topology is induced by
+very high energy charged-current $\nu_\tau+\bar{\nu}_\tau$ interactions with
+the tau lepton decaying to hadrons after traveling a distance
+$\sim50\:\mathrm{m\,PeV}^{-1}\times E_\tau$, resulting in two cascades separated
+distinctly. Such a \emph{double-bang} has not been observed so
+far~\citep{Aartsen:2015dlt}.
+
+Track-like events are more suited than cascades to search for very localized
+(point-like), faint sources using high statistics and good angular resolution.
+Such events originate primarily in neutrino charged-current interactions
+of muon (anti)neutrinos with nucleons, but also in similar interactions of tau
+neutrinos with the tau lepton decaying to muons and neutrinos, or
+interactions of electron antineutrinos with electrons by resonant s--channel
+$W^-$ exchange~\citep[Glashow Resonance;][]{Glashow:1960zz}. The energy of
+a muon track is restricted to the fraction of the track visible in the
+detector, limiting the energy estimation to the \emph{deposited energy} in
+the detector or the muon energy upon entering the detector. Independent of the
+details of neutrino production, the incident flux of astrophysical neutrinos at
+Earth will consist of an approximately equally shared flavor ratio for all
+neutrinos due to very long baseline neutrino oscillations~\citep{Athar:2005wg}.
+In the following, only the component of tracks created in muon neutrino
+interactions is taken into account as the signal of astrophysical neutrinos,
+likewise to \cite{Aartsen:2014cva} and \cite{Adrian-Martinez:2014wzf}. The
+impact of track events originating from other neutrino interactions is
+discussed in \ref{sec:sys}.
+
+Construction of IceCube finished in December~2010 after 6~yr of
+deployment. During construction, partial configurations of the detector were
+successfully taking data, commonly indicated by IC$XY$, with $XY$ denoting the
+number of active strings. The first three years of the event sample are in
+partial detector configurations IC40, IC59, and IC79. The previously published
+analysis~\citep{Aartsen:2014cva} included the first year of data-taking with
+the completed detector IC86 and 3~yr in partial
+configuration~\citep{Abbasi:2010rd, Aartsen:2013uuv}. These samples focus on
+through-going track-like events, yielding high statistics over broad energy
+ranges. In the southern sky, an additional selection of starting tracks, which
+has a greatly reduced background rate, is performed access lower
+energies~\citep{Aartsen:2016tpb}.  This uses completely independent events to
+the ones selected in the aforementioned through-going track channel.
+
+%\begin{deluxetable}{p{0.08\textwidth}rrrr}
+%\tablecaption{IceCube samples used in this analysis. For each sample,
+%              characteristic features are quoted, separated in the two halves
+%              of the sky. Previously published results used four years of data:
+%              IC40~\citep{Abbasi:2010rd}, IC59+IC79~\citep{Aartsen:2013uuv},
+%              and the first year of IC86~\citep{Aartsen:2014cva}. Data taken in
+%              the seasons from 2012 to 2015 are added in this paper. The
+%              separation in the two regions is done at a declination of
+%              $\delta=-5\deg$. In addition, starting tracks are used in a
+%              separate sample~\citep{Aartsen:2016tpb} with two additional years
+%              of available data.\label{tab:sample-stats}}
+%
+%\tablehead{\colhead{Sample} & \colhead{Livetime} & \colhead{atm. $\nu$}
+%            & \colhead{Up-going} & \colhead{Down-going}\\
+%           & \colhead{(days)} & \colhead{(day$^{-1}$)}
+%            & \colhead{events} & \colhead{events}}
+%\startdata
+%IC40          & 376   &  40         &  16323 &  20577 \\*
+%IC59          & 348   & 120         &  48105 &  58906 \\*
+%IC79          & 316   & 180         &  54823 &  38310 \\*
+%IC86          & 333   & 210         &  67938 &  68302 \\*
+%2012-2015     & 1058  & 220         & 235602 & 102983 \\*
+%$\Sigma$      & 2431 & \nodata      & 422791 & 289078 \\*
+%starting tracks & 1715  & $<\,0.03$ &      0 &    961 \\*
+%\enddata
+%\end{deluxetable}
+
+The details of all samples are listed in \ref{tab:sample-stats}, including
+the exposure time and sample size. In this work, the detector livetime is
+increased by adding data from June~2012 to June~2015 to the analysis, thus
+increasing the livetime by 1058~days, to a total of 2431~days. The sample of
+starting tracks~\citep{Aartsen:2016tpb} has an increased livetime of 2~yr to
+a total of 1715~days that coincide with the five most recent years of the
+through-going track event sample, starting with IC79.
+
+In the following, the modeling of signal and background for both the
+through-going and starting track samples is described.  The event selection is
+briefly discussed and the performance of the event sample highlighted. For more
+detailed information, refer to \cite{Abbasi:2010rd}, \cite{Aartsen:2013uuv},
+and \cite{Aartsen:2014cva} for through-going muons and \cite{Aartsen:2016tpb}
+for starting tracks.
+
 \section{Data Selection}
 
 \subsection{Through-Going Tracks}
 
+The main background regarding neutrino searches in IceCube consists of
+atmospheric muons that are created in extensive air showers and reach IceCube
+at a depth of $\sim2\:\mathrm{km}$.  Almost all events triggering the detector
+at a rate of $\sim2.8\:\mathrm{kHz}$ belong to this component. Similar
+to~\cite{Aartsen:2014cva}, the selection is split into two regions divided at
+the horizon (declination $\delta=-5\deg$) due to different background
+characteristics, as explained in the following.
+
+In the northern sky (up-going region, $\delta\geq-5\deg$), the main background
+consists of atmospheric muon events that are mis-reconstructed as up-going;
+truly up-going muons can only originate from prior neutrino interactions, since
+all other muons are shielded by the Earth. Hence, the atmospheric muon
+background is rejected by identifying poorly reconstructed events. In order to
+achieve this, multivariate selection techniques (boosted decision tree, BDT)
+are used to discriminate well-reconstructed tracks from neutrino interactions
+against mis-reconstructed background. The variables used in the BDT are
+connected to the event quality and a clear track-like topology. Similar to
+\cite{Aartsen:2014cva}, BDTs are trained for two signal energy spectra of
+$E^{-2}$ and $E^{-2.7}$ and the cut on the linear combination of BDT scores is
+optimized to yield the best sensitivity and discovery potential over a wide
+range of energies with the final cut on BDT output. These spectra are chosen to
+be sensitive to both hard energy spectra as well as soft or cutoff spectra. A
+neutrino-dominated sample is obtained in the northern sky. The remaining
+background consists of atmospheric neutrinos produced in the northern sky.
+These neutrinos are an irreducible background, but follow a softer energy
+spectrum ($\sim E^{-3.7}$--$E^{-4.0}$ or $\sim E^{-2.7}$--$E^{-3.0}$ for
+conventional or prompt neutrinos, respectively) than the expected signal ($\sim
+E^{-2}$ consistent with diffuse muon neutrino signal at $250\:\mathrm{TeV}$ and
+above; see \cite{Aartsen:2016xlq}). \ref{fig:effA} shows the effective area
+calculated using muon neutrino Monte Carlo simulation of the final event sample
+for different declination regions.  In the northern sky (red, blue), a low
+energy threshold is achieved, while for near-vertically up-going events
+absorption becomes an important effect above $100\:\mathrm{TeV}$.
+\ref{fig:mrs} shows the median angular resolution of the track
+reconstruction (solid) with respect to the primary neutrino direction against
+neutrino energy. Above TeV energies, the kinematic angle (dotted) of muon and
+parent neutrino becomes negligible and the angular resolution is below $1\deg$.
+The energy resolution of the track's energy proxy is $\sim30\%$ in
+$\log_{10}{E}$~\citep{Aartsen:2013vja}. This is only a lower limit on the
+energy of a muon that enters the detector from outside and loses energy prior
+to detection, as well as on energy of the primary neutrino that produced the
+muon in an interaction with a nucleus. For more information about the neutrino
+and muon energy estimation, refer to \cite{Aartsen:2015rwa, Aartsen:2016xlq}.
+
+In the southern sky (down-going, $\delta<-5\deg$), the picture changes because
+of large backgrounds of well-reconstructed down-going atmospheric muons.
+Moreover, muons are produced at high multiplicity in cosmic-ray showers,
+resulting in bundles of muons; such bundles produce large amounts of light in
+the detector, thus imitating the signature of a single muon of much higher
+energy. Similar to the northern sky, BDTs are used to select only the
+best-reconstructed events at the highest energies. Following the development of
+\cite{Aartsen:2014cva}, in addition to event quality and track topology
+parameters, four variables are used to further discriminate atmospheric
+muon bundles from single muons. These variables use the deposited energy along
+the track, as well as the light-arrival time of photons at the DOMs. The
+Cerenkov light yield for high-energy muons is dominated by stochastic cascades
+from energy losses along the track superimposed to the Cerenkov cone of the
+muon track. Bundles of muons at lower energies show less frequent losses by
+stochastic cascades. The result is a smoother light yield along the
+track. Furthermore, muon bundles consist of a superposition of many
+Cherenkov-cones, resulting in many photons arriving earlier than under the
+assumption of one single Cherenkov cone. For a signal-spectrum $E^{-2}$, a BDT
+is trained for final selection of events. The large backgrounds require harsh
+cuts to reduce their rate significantly, resulting in an effective selection of
+only very high energy events, as shown in \ref{fig:effA} (yellow and
+purple).  It is evident that the energy threshold in the down-going region
+increases to $\sim100\:\mathrm{TeV}$ and even further for more vertically
+down-going events. The IceTop surface array is used as an active veto against
+coincident air-shower events for vertically down-going events.  For
+high energies, this vetoes $90\%$ of the events for vertically down-going
+events and less for inclined events, with random coincidences in less than
+$0.1\%$ of the cases \citep{Aartsen:2013uuv}; compare \ref{fig:cosSpline}.
+The final event rate in the southern sky is optimized to yield the best
+sensitivity and discovery potential for an $E^{-2}$ spectrum.
+
+The distribution of the cosine zenith $\cos\theta$ (equivalent to the
+negative sine of declination $-\sin\delta$ in equatorial coordinates) is shown
+in \ref{fig:cosSpline}. The event rate for experimental data of all 3~yr is
+compared to the expectations of muon neutrinos and atmospheric mouns estimated
+from Monte Carlo simulation. In the northern sky ($\theta>85\deg$), the sample
+is dominated by atmospheric neutrinos produced in the decays of kaons and pions
+in cosmic-ray air showers~\citep{Honda:2006qj} and is well described by Monte
+Carlo simulation. In the southern sky, the neutrino event rate reduces
+drastically due to the higher energy threshold mentioned before.  Instead,
+atmospheric muons are the dominant component. Astrophysical neutrinos with hard
+energy spectra (as, e.g. shown with $E^{-2}$) do not suffer a rate loss as
+severe as for the soft energy spectrum of atmospheric neutrinos. For very
+vertically down-going events, the IceTop surface array vetoes atmospheric muon
+and neutrino events because of their coincident air shower. In this region, the
+observed event rate is kept constant with the rest of the southern sky using
+looser cuts on the BDT score, which allows more neutrinos to be detected
+especially at the lower energy end. Hence, the corresponding event rate in
+\ref{fig:cosSpline} does not decrease above $\cos\theta>0.7$.
+
 \subsection{Starting Tracks}
+
+In the southern sky, the large background of atmospheric muons reduces the
+efficiency to select through-going tracks induced by neutrinos below the PeV
+regime. A very large fraction of the aforementioned background can be rejected
+by imposing an active veto at the detector boundary, as, for example, used in
+\cite{Aartsen:2013jdh}. This reduces the detector volume to a smaller fraction
+of the instrumented volume sacrificing statistics for signal purity.
+Furthermore, the more clearly an event is identified as a starting track, the
+more probable it is to be an astrophysical rather than atmospheric background.
+Down-going atmospheric neutrino events at high energy are likely to be
+accompanied by muons produced in the same cosmic-ray shower that triggers the
+veto and reduces the atmospheric neutrino background~\citep{Schonert:2008is,
+Gaisser:2014bja}. In analyses using veto techniques~\citep{Aartsen:2013jdh,
+Aartsen:2014muf}, the selection is usually more efficient for cascade-like
+events than tracks, and high astrophysical neutrino purity demands neglecting
+energies below $60\:$TeV where backgrounds are more abundant.  In searches for
+point-like sources of astrophysical neutrinos, track-like events are of great
+importance given their good angular resolution compared to cascade-like events.
+Furthermore, the purity demands are lower since the signal of a point-like
+source is restricted to a small portion of the sky, hence reducing the
+background significantly. Consequently, the minimum required total charge
+deposited in the PMTs of the IceCube detector by an event is lowered to
+$1500\:\mathrm{p.e.}$ compared to
+$6000\:\mathrm{p.e.}$~\citep{Aartsen:2013jdh}, resulting in a higher signal
+efficiency at lower energies. In addition, only down-going tracks are used, and
+cuts are imposed that select well-reconstructed track-like
+events~\citep{Aartsen:2016tpb}. For $\nu_\mu+\bar{\nu}_\mu$ events at energies
+smaller than $200\:\mathrm{TeV}$, the effective area of the analysis is bigger
+than for vertically through-going tracks
+($\delta<-30\deg$; \ref{fig:effA}).  For energies up to
+$1\:$PeV, the effective area is smaller, but a higher purity is achieved.  The
+angular resolution for starting tracks is shown in \ref{fig:mrs} (dashed)
+and is $\sim1\deg$ in the interesting energy region; the reconstruction is
+worse than for through-going events (solid), due to a smaller lever arm for
+tracks starting within the fiducial volume of the detector.
+
+In 5~yr, 961 events were recorded in the southern sky starting track
+sample. The overlap of events in the starting track sample and the
+through-going events is very small, and overlapping events are removed from the
+through-going sample because of its higher background rate.
 
 \section{Simulated Detector Response}
 
 \subsection{Effective Area}
+
+In this work, muon tracks induced by astrophysical neutrino interactions are
+the main signal category in the search for point-like sources of neutrinos.
+Detailed Monte Carlo simulation is used to evaluate the response of IceCube to
+such events and distinguish them from atmospheric backgrounds. The median
+angular resolution $\Delta\Psi$ and the event rate expectation
+\begin{align}
+    \dot{N}_\nu=\int d\Omega\int_0^\infty dE\,A_\mathrm{eff}\left(E, \Omega\right)
+                \times F_\nu\left(E_\nu,\Omega\right)
+    \label{eq:ev_rate}
+\end{align}
+given by the detector \emph{effective
+area} $A_\mathrm{eff}$ and the incident neutrino flux $F_\nu$ can be derived
+from the simulation (for more information about the details of the Monte Carlo
+simulation used here, see \cite{Aartsen:2016xlq}).
 
 \subsection{Angular Reconstruction}
 
@@ -49,6 +312,10 @@ IceCube has performed several all-sky searches for point-like neutrino sources. 
 \begin{acknowledgements}
 \input{agencies.tex}
 \end{acknowledgements}
+
+\bibliographystyle{utphys_mod}
+
+\bibliography{references}
 
 \end{document}
 
