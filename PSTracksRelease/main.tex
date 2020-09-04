@@ -118,8 +118,29 @@ Muon tracks induced by astrophysical neutrino interactions are the main signal c
 given by the detector \emph{effective area} $A_\mathrm{eff}$ and the incident neutrino flux $\nu_\nu$ can be derived from the simulation; see \cite{Aartsen:2016xlq}.
 
 \section{Comparison to Previous Releases}
+There have been multiple previous IceCube data releases selecting for muon track-like events in the northern and southern hemisphere, primarily for the purpose of neutrino astronomy ~\cite{Abbasi:2010rd,Aartsen:2013uuv,IceCube:2018,IceCube:2019,IceCube:TXS2018}. The dataset detailed in this document is the newest such attempt at creating a sample of muon track-like events, with the goal of standardizing the IC86 2012-2017 data taking period. This dataset can be considered to be a successor to ~\cite{IceCube:2019}, providing an updated description of the data from 2012-2015, as well as two additional years of data in 2016-2017. 
 
-\MA{\it \ldots here would go the TXS comparison \ldots}
+While similar in goal and methods to ~\cite{IceCube:2019}, this sample includes several improvements. The angular reconstruction has been improved, and the event classifier and sample pre-cuts have been altered to better reject cascade-like events. These changes mean that some events present in previous data releases may not be present in this sample, even for overlapping time periods.
+
+As an example of how the changing content of the different data samples can affect the process of searching for hotspots in IceCube data, we examine the 2014/2015 neutrino flare associated with TXS 0506+056 ~\cite{IceCube:2018cha}. The $3.5 \sigma$ excess seen in in 2014/2015 was identified using the data sample corresponding to ~\cite{IceCube:2019}. Here, we repeat the analysis shown in ~\cite{IceCube:2018cha}, but instead use the data sample presented in this document. The results of this cross-check can be seen in table ~\ref{tab:TXSCrossChecks}.
+
+The lower significance of the 2014/2015 neutrino flare when performing the flare search with this data release appears to have been caused by the presence of two cascade-like events that existed in the data sample associated with ~\cite{IceCube:2019}, but have been removed from the data sample presented in this document. Performing the untriggered flare search using the sample associated with `\cite{IceCube:2019}, but with the two cascade events removed seems to produce a drop in significance similar to that which is observed when using this sample, as seen in table ~\ref{tab:TXSCrossChecks}. 
+
+\MA{\it \ldots To be continued \ldots}
+
+\begin{table}[t]
+\centering
+\begin{ruledtabular}
+\begin{tabular}{cccccc}
+\multicolumn{6}{c}{Cross-check Results} \\[0.1cm]
+Sample & p-value (pre-trial) & $T_{start}$ & $T_{stop}$ & $n_s$ & $\gamma$\\ 
+\cite{IceCube:2018cha}, \cite{IceCube:2019} & 7.0e-5 & 56937.81 & 57096.22 & 14.39 & 2.20 \\
+This sample & 8.14e-3 & 56927.86 & 57116.76 & 11.87 & 2.22 \\
+\cite{IceCube:2018cha}-2 cascades & 1.17e-3 & 56937.81 & 57112.65 & 12.22 & 2.26 \\
+\end{tabular}
+\end{ruledtabular}
+\caption[]{The results of repeating the analysis done in ~\cite{IceCube:2018cha}, but using the dataset presented in this document in place of ~\cite{IceCube:2019}, the dataset that was originally used. The drop in significance when using this sample versus the older sample can be explained by events present in the older sample that have been removed from the newer sample presented here.}\label{tab:TXSCrossChecks}
+\end{table}
 
 \begin{acknowledgements}
 \begin{center}\MA{(\it List of agencies in final version)}\end{center}
