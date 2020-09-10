@@ -119,15 +119,13 @@ Muon tracks induced by astrophysical neutrino interactions are the main signal c
 given by the detector \emph{effective area} $A_\mathrm{eff}$ and the incident neutrino flux $\nu_\nu$ can be derived from the simulation; see \cite{Aartsen:2016xlq}.
 
 \section{Comparison to Previous Releases}
-There have been multiple previous IceCube data releases selecting for muon track-like events in the northern and southern hemisphere, primarily for the purpose of neutrino astronomy ~\cite{Abbasi:2010rd,Aartsen:2013uuv,IceCube:2018,IceCube:2019,IceCube:TXS2018}. The dataset detailed in this document is the newest such attempt at creating a sample of muon track-like events, with the goal of standardizing the IC86 2012-2017 data taking period. This dataset can be considered to be a successor to ~\cite{IceCube:2019}, providing an updated description of the data from 2012-2015, as well as two additional years of data in 2016-2017. 
+There have been multiple previous IceCube data releases selecting for muon track-like events in the northern and southern hemisphere, primarily for the purpose of neutrino astronomy ~\cite{Abbasi:2010rd,Aartsen:2013uuv,IceCube:2018,IceCube:2019,IceCube:TXS2018}. The dataset detailed in this document is the newest such attempt at creating a sample of muon track-like events, with the goal of standardizing the IC86 2012-2017 data taking period. This dataset can be considered to be a successor to ~\cite{IceCube:2019}, providing an updated description of the data from 2012-2015, as well as adding two additional years of data in 2016-2017. 
 
-While similar in goal and methods to ~\cite{IceCube:2019}, this sample includes several improvements. The angular reconstruction has been improved, and the event classifier and sample pre-cuts have been altered to better reject cascade-like events. A consequence of this is that some events present in previous data releases may not be present in this sample.
+While similar in goal and methods to ~\cite{IceCube:2019}, this sample includes several improvements in addition to the aforementioned standardization of the IC86 data taking periods. In this version of the data sample, the angular reconstruction has been improved, and the event classifier and sample pre-cuts have been altered to better reject cascade-like events and accept track-like events. The net effect of the sample changes is an increase in event rate relative to previous versions of the sample. In the IC86 2012-2015 data taking period, the new version of the data sample contains 362,818 events, in comparison to 338,588 in the previous version. Of these events, approximately 18\% (64,931 out of 362,818) are unique to the new version of the data sample, and are not present in older versions. Approximately 12\% (40,823 out of 338,588) of the events present in the older version of the sample are not present in the updated version presented here. 
 
-As an example of how the changing content of the different data samples can affect the process of searching for hotspots in IceCube data, we examine the 2014/2015 neutrino flare associated with TXS 0506+056 ~\cite{IceCube:2018cha}. The $3.5 \sigma$ excess seen in in 2014/2015 was identified using the data sample corresponding to ~\cite{IceCube:2019}. Here, we repeat the analysis shown in ~\cite{IceCube:2018cha}, but instead use the data sample presented in this document. The results of this cross-check can be seen in table ~\ref{tab:TXSCrossChecks}.
+As an example of how the changing content of the different versions of this data sample can affect the process of searching for hotspots in IceCube data, we examine the 2014/2015 neutrino flare associated with TXS 0506+056 ~\cite{IceCube:2018cha}. The $3.5 \sigma$ excess seen in in 2014/2015 was identified using the data sample corresponding to ~\cite{IceCube:2019}. Here, we repeat the analysis shown in ~\cite{IceCube:2018cha}, but instead use the newest data sample presented in this document. The results of this cross-check can be seen in table ~\ref{tab:TXSCrossChecks}. Notably, the significance of the 2014/2015 neutrino flare appears to have decreased (from $p=7.0 \times 10^{-5}$ to $p=8.1 \times 10^{-3}$) when using the most recent version of the data sample. A comparison of the reconstructed parameters of the most signal-like neutrino events contributing to the 2014/2015 flare in both versions of the data sample can be seen in table ~\ref{tab:TXSFlareEvtsTable}
 
-The lower significance of the 2014/2015 neutrino flare when performing the flare search with this data release appears to have been caused by the presence of two cascade-like events that existed in the data sample associated with ~\cite{IceCube:2019}, but have been removed from the data sample presented in this document. These two events did not pass a track length pre-cut that was introduced in the newest version of this data sample, requiring that all northern-sky events have a reconstructed track length greater than 200 meters. This pre-cut is intended to filter out poorly localized cascade events prior to applying the BDT. Performing the untriggered flare search using the sample associated with ~\cite{IceCube:2019}, but with the two cascade events manually removed seems to result in a drop in significance similar to that which is observed when using this sample, as seen in table ~\ref{tab:TXSCrossChecks}. Figure ~\ref{fig:TXSEvtsCompare} shows a comparison of the events most heavily contributing to the 2014/2015 TXS 0506+056 flare in both this data sample, and the most recent prior data release (~\cite{IceCube:2019}). 
-
-\MA{\it \ldots To be continued \ldots}
+The lower significance of the 2014/2015 neutrino flare in the most recent version of the sample appears to have been caused by the presence of two cascade-like events that existed in the data sample associated with ~\cite{IceCube:2019}, but have been removed from the data sample presented in this document. These two events did not pass a track length pre-cut that was introduced in the newest version of this data sample, requiring that all northern-sky events have a reconstructed track length greater than 200 meters. This pre-cut is intended to filter out poorly localized cascade events prior to applying the BDT. Performing the untriggered flare search using an older version of the sample (~\cite{IceCube:2019}), but with the two cascade events manually removed seems to result in a drop in significance similar to that which is observed when using this sample, as seen in table ~\ref{tab:TXSCrossChecks}. The drop in significance cannot be otherwise adequately explained by changes to the angular reconstruction of events between the two versions of the sample. Figure ~\ref{fig:TXSEvtsCompare} shows a comparison of the events most heavily contributing to the 2014/2015 TXS 0506+056 flare in both this data sample, and the most recent prior data release (~\cite{IceCube:2019}). While the significance of the 2014/2015 neutrino flare appears to have decreased when using the most recent version of the data sample, it should be noted that this is primarily a cross check between the new and old versions of the same data sample. The results are presented here primarily to demonstrate the differences between the old and new versions of this data sample. The results of this check do not supersede the results shown in ~\cite{IceCube:2018cha}.
 
 \begin{figure*}[t]
 \centering
@@ -143,7 +141,7 @@ The lower significance of the 2014/2015 neutrino flare when performing the flare
 \caption[]{The top 14 most signal-like flare events contributing to the 2014/2015 neutrino flare associated with TXS 0506+056 (black "X"), both in the sample associated with ~\cite{IceCube:2019} (left), and the sample presented in this document (right). The size of the colored circles corresponds to the 1-sigma containment region of the angular reconstruction of that event, and the color of the circle corresponds to the reconstructed energy proxy.}\label{fig:TXSEvtsCompare}
 \end{figure*}
 
-\begin{table}
+\begin{table*}
 \centering
 \begin{ruledtabular}
 \begin{tabular}{cccccc}
@@ -151,11 +149,41 @@ The lower significance of the 2014/2015 neutrino flare when performing the flare
 Sample & p-value (pre-trial) & $T_{start}$ & $T_{stop}$ & $n_s$ & $\gamma$\\ 
 \cite{IceCube:2018cha}, \cite{IceCube:2019} & 7.0e-5 & 56937.81 & 57096.22 & 14.39 & 2.20 \\
 This sample & 8.14e-3 & 56927.86 & 57116.76 & 11.87 & 2.22 \\
-\cite{IceCube:2018cha}-2 cascades & 1.17e-3 & 56937.81 & 57112.65 & 12.22 & 2.26 \\
+\cite{IceCube:2018cha}, removed cascades & 1.17e-3 & 56937.81 & 57112.65 & 12.22 & 2.26 \\
 \end{tabular}
 \end{ruledtabular}
 \caption[]{The results of repeating the analysis done in ~\cite{IceCube:2018cha}, but using the dataset presented in this document in place of ~\cite{IceCube:2019}, the dataset that was originally used. The drop in significance when using this sample versus the older sample can be explained by events present in the older sample that have been removed from the newer sample presented here.}\label{tab:TXSCrossChecks}
-\end{table}
+\end{table*}
+
+\begin{table*}
+\centering
+\begin{ruledtabular}
+\begin{tabular}{c|cccc|cccc}
+\multicolumn{1}{c|}{} &
+\multicolumn{4}{c|}{2019 Data Release} & 
+\multicolumn{4}{c}{2020 Data Release}\\[0.1cm]
+Event ID & RA (deg) & Dec (deg) & $\sigma$ (deg) & $\log(E/GeV)$ & RA (deg) & Dec (deg) & $\sigma$ (deg) & $\log(E/GeV)$\\ 
+\hline
+63641159 & 77.55 & 5.40 & 0.20 & 3.97 & 77.35 & 5.42 & 0.20 & 3.97\\
+5363166 & 77.28 & 5.54 & 0.38 & 3.91 & 77.32 & 5.50 & 0.34 & 3.91\\
+55370999 & 77.68 & 5.89 & 0.20 & 3.69 & 77.71 & 5.90 & 0.20 & 3.69\\
+52497651 & 76.45 & 5.43 & 1.09 & 4.17 & 76.35 & 5.22 & 0.36 & 4.71\\
+56262988 & 78.82 & 6.26 & 1.77 & 4.30 & - & - & - & - \\
+502182 & 76.34 & 6.04 & 0.50 & 4.13 & 76.16 & 6.19 & 0.43 & 4.13 \\
+44740885 & 77.55 & 5.72 & 0.36 & 3.09 & 77.60 & 5.56 & 0.48 & 3.0 \\
+40914587 & 77.49 & 5.79 & 1.65 & 3.79 & - & - & - & -  \\
+26587403 & 77.14 & 5.54 & 0.98 & 3.46 & 77.43 & 5.34 & 1.09 & 3.46 \\
+769297 & 76.77 & 6.06 & 0.79 & 3.42 & 76.77 & 5.80 & 0.77 & 3.42 \\
+24269091 & 77.03 & 5.14 & 1.05 & 3.43 & 76.35 & 5.22 & 0.36 & 4.17 \\
+30121650 & 77.14 & 5.01 & 0.60 & 1.99 & 77.14 & 5.15 & 0.63 & 1.99 \\
+51031373 & 77.90 & 5.82 & 0.78 & 2.82 & - & - & - & - \\
+63708451 & 77.73 & 6.36 & 0.64 & 2.91 & 77.75 & 6.23 & 0.63 & 2.91 \\
+54221887 & - & - & - & - & 77.05 & 5.05 & 0.40 & 3.71 \\
+1939266 & - & - & - & - & 77.39 & 4.93 & 0.33 & 3.53 \\
+\end{tabular}
+\end{ruledtabular}
+\caption[]{The most signal-like events contributing to the 2014/2015 TXS 0506+056 neutrino flare, in both the data sample associated with ~\cite{IceCube:2019}, as well as the data sample presented here. There were no changes to energy reconstruction between the two sample versions, but the angular reconstruction and sample event content have changed.}\label{tab:TXSFlareEvtsTable}
+\end{table*}
 
 \begin{acknowledgements}
 \begin{center}\MA{(\it List of agencies in final version)}\end{center}
