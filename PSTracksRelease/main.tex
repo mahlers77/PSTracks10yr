@@ -32,7 +32,7 @@ urlcolor=Blue1!70!black}
 
 \title{IceCube Data for Neutrino Point-Source Searches: Years 2012--2018}
 
-\author{\MA{IceCube author list in final version}}
+\author{Author list in final version}
 %\input{authorlist.tex}
 \collaboration{IceCube Collaboration}
 \noaffiliation
@@ -47,81 +47,106 @@ IceCube has performed several all-sky searches for point-like neutrino sources. 
 
 \section{Introduction}
 
-The IceCube Observatory~\cite{Aartsen:2016nxy} at the geographic South Pole has been operating at full capacity for the past ten years. In 2013, IceCube reported first evidence of an isotropic flux of astrophysical neutrinos in the TeV-PeV energy range~\cite{Aartsen:2013bka,Aartsen:2013jdh}. While the flux is by now observed with high significance~\cite{Aartsen:2014gkd,Aartsen:2015rwa,Aartsen:2016xlq,IceCube:2018dnn,IceCube:2018cha} its astrophysical origin remains uncertain~\cite{Ahlers:2018fkn}. In parallel, IceCube has been searching for high-energy neutrino emission from individual point sources, including unbiased all-sky searches~\cite{Abbasi:2010rd,Aartsen:2013uuv,Aartsen:2014cva,Aartsen:2014cva,Aartsen:2018ywr,Aartsen:2019fau} as well as individual source candidates like cores of active galaxies~\cite{Bradascio:2019xdd}, blazars~\cite{Aartsen:2016lir}, $\gamma$-ray bursts~\cite{Abbasi:2012zw,Aartsen:2014aqy,Aartsen:2016qcr,Aartsen:2017wea}, fast radio bursts~\cite{Aartsen:2017zvw}, nearby galaxies~\cite{Aartsen:2019xkn}, diffuse Galactic emission~\cite{Albert:2018vxw}, Galactic $\gamma$-ray sources~\cite{Kheirandish:2019bke}, pulsar wind nebulae~\cite{Aartsen:2020eof}, or X-ray binaries\cite{Abbasi:2011ke}. IceCube takes also part in various realtime multi-messenger activities via the fast response to external alerts in photons~\cite{Abbasi:2011ja,Aartsen:2015trq} or gravitational waves~\cite{Adrian-Martinez:2016xgn,ANTARES:2017iky,Aartsen:2020mla} and by providing astrophysical neutrino candidates~\cite{Aartsen:2016lmt,AyalaSolares:2020ing}. Recently, IceCube was able to report first compelling evidence of neutrino emission from the $\gamma$-ray blazar TXS 0506+056~\cite{Finley:2019vpk,IceCube:2018cha}.
+The IceCube Observatory~\cite{Aartsen:2016nxy} at the geographic South Pole has been operating at full capacity for the past ten years. In 2013, IceCube reported first evidence of an isotropic flux of astrophysical neutrinos in the TeV-PeV energy range~\cite{Aartsen:2013bka,Aartsen:2013jdh}. While the flux is by now observed with high significance~\cite{Aartsen:2014gkd,Aartsen:2015rwa,Aartsen:2016xlq,IceCube:2018dnn,IceCube:2018cha} its astrophysical origin remains uncertain~\cite{Ahlers:2018fkn}. In parallel, IceCube has been searching for high-energy neutrino emission from individual point sources, including unbiased all-sky searches~\cite{Abbasi:2010rd,Aartsen:2013uuv,Aartsen:2014cva,Aartsen:2014cva,Aartsen:2018ywr,Aartsen:2019fau} as well as individual source candidates like cores of active galaxies~\cite{Bradascio:2019xdd}, blazars~\cite{Aartsen:2016lir}, $\gamma$-ray bursts~\cite{Abbasi:2012zw,Aartsen:2014aqy,Aartsen:2016qcr,Aartsen:2017wea}, fast radio bursts~\cite{Aartsen:2017zvw}, nearby galaxies~\cite{Aartsen:2019xkn}, diffuse Galactic emission~\cite{Albert:2018vxw}, Galactic $\gamma$-ray sources~\cite{Kheirandish:2019bke}, pulsar wind nebulae~\cite{Aartsen:2020eof}, or X-ray binaries~\cite{Abbasi:2011ke}. IceCube takes also part in various realtime multi-messenger activities via the fast response to external alerts in photons~\cite{Abbasi:2011ja,Aartsen:2015trq} or gravitational waves~\cite{Adrian-Martinez:2016xgn,ANTARES:2017iky,Aartsen:2020mla} and by providing astrophysical neutrino candidates~\cite{Aartsen:2016lmt,AyalaSolares:2020ing}. Recently, IceCube was able to report first compelling evidence of neutrino emission from the $\gamma$-ray blazar TXS 0506+056~\cite{Finley:2019vpk,IceCube:2018cha}.
 
-This paper accompanies the public data release of track-like neutrino candidates detected by IceCube between April 6, 2008 and July 10, 2018. The underlying event selection, \MA{called {\tt PSTracks} in the following}, is designed for point-source studies, that benefit from the good angular resolution of tracks and can tolerate larger atmospheric background contributions compared to diffuse neutrino analyses. In the following we give an account of the IceCube detector, the event selection and detector performance. We also highlight changes to previous data selections and releases.
+This paper accompanies the public data release of track-like neutrino candidates detected by IceCube between April 6, 2008 and July 8, 2018. The underlying event selection, called {\tt PSTracks} in the following, is designed for point-source studies, that benefit from the good angular resolution of tracks and can tolerate larger atmospheric background contributions compared to diffuse neutrino analyses. In the following we give an account of the IceCube detector (Sec.~\ref{secI}), the event selection (Sec.~\ref{secII}) and detector performance (Sec.~\ref{secIII}). We also highlight changes to previous data selections and releases in Sec.~\ref{secIV}.
 
-\section{The IceCube Observatory}
+\section{The IceCube Observatory}\label{secI}
 
 The IceCube Observatory identifies neutrino interactions in the vicinity of the detector by the Cherenkov light emitted by relativistic charged secondary particles traveling through the deep ultra-clear glacial ice. The in-ice detector consists of 5,160 Digital Optical Modules (DOMs) that are distributed across a fiducial volume of one cubic kileometer~\cite{Abbasi:2008aa, Abbasi:2010vc}. The DOMs are distributed on 86 read-out and support cables (``strings'') and are deployed between 1.5~km and 2.5~km below the surface. Most strings follow a triangular grid with a width of 125~m, evenly spaced over the volume. The DOMs consist of a photomultiplier tube, electronics for digitization, and LEDs for detector calibration~\cite{Abbasi:2008aa, Abbasi:2010vc}.
 
-Eight strings are placed in the centre of the array and are instrumented with a denser DOM spacing and typical inter-string separation of 55~m. They are equipped with photomultiplier tubes with higher quantum efficiency. These strings, along with the first layer of the surrounding standard strings, form the \emph{DeepCore} low-energy sub-array~\cite{Collaboration:2011ym}. While the main IceCube array has a neutrino energy threshold of about 100~GeV, the addition of the denser infill lowers the energy threshold to about 10~GeV. The IceCube Neutrino Observatory includes a surface array of water Cherenkov detectors called \emph{IceTop}~\cite{IceCube:2012nn} that detects and reconstructs air showers above $300\:$TeV using 82 ice tanks. The data presented in this release uses IceTop's capabilities to veto cosmic-ray-induced backgrounds.
+Eight strings are placed in the center of the array and are instrumented with a denser DOM spacing and typical inter-string separation of 55~m. They are equipped with photomultiplier tubes with higher quantum efficiency. These strings, along with the first layer of the surrounding standard strings, form the \emph{DeepCore} low-energy sub-array~\cite{Collaboration:2011ym}. While the main IceCube array has a neutrino energy threshold of about 100~GeV, the addition of the denser infill lowers the energy threshold to about 10~GeV. The IceCube Neutrino Observatory includes a surface array of 82 pairs of water Cherenkov detectors, called \emph{IceTop}~\cite{IceCube:2012nn}, that detects and reconstructs air showers above $300\:$TeV. The data presented in this release uses IceTop's capabilities to veto cosmic-ray-induced backgrounds in the Southern hemisphere.
 
-The event selection targets high-energy muons produced by the interaction of astrophysical neutrinos in the vicinity of the detector. These \emph{track}-like events originate primarily in charged-current interactions of muon (anti-)neutrinos ($\nu_\mu$ \& $\bar{\nu}_\mu$) with nucleons, but also in similar interactions of tau (anti-)neutrinos ($\nu_\tau$ \& $\bar{\nu}_\tau$) with the tau lepton decaying to muons and neutrinos, or interactions of electron antineutrinos ($\bar{\nu}_e$ with electrons by resonant $s$-channel $W^-$ exchange~\cite{Glashow:1960zz}. Below $700$~GeV, muons lose energy mainly due to ionization; above $700$~GeV, stochastic energy losses due to radiative emission become the dominant component. At TeV energies, muons travel long distances, larger than several kilometers in the Antarctic ice~\cite{Chirkin:2004hz}. Light is constantly emitted along the track. The resulting long lever arm gives a good reconstruction performance with median angular resolution $\Delta\Psi<1\deg$. The absolute pointing accuracy of IceCube has been demonstrated to be $\lesssim0.2^\circ$~\cite{Aartsen:2013zka} via measurements of the effect of the Moon shadow on the background cosmic ray (CR) flux. 
+The event selection targets high-energy muons produced by the interaction of astrophysical neutrinos in the vicinity of the detector. These \emph{track}-like signal events originate primarily in charged-current interactions of muon (anti-)neutrinos ($\nu_\mu$ \& $\bar{\nu}_\mu$) with nucleons producing energetic muons; similar interactions of tau (anti-)neutrinos ($\nu_\tau$ \& $\bar{\nu}_\tau$) with the tau lepton decaying to muons and neutrinos, or resonant interactions of electron antineutrinos ($\bar{\nu}_e$) with in-ice electrons~\cite{Glashow:1960zz} also contribute to track-like signal events to a lower extend. Below $700$~GeV, secondary muons lose energy mainly due to ionization; above $700$~GeV, stochastic energy losses due to radiative emission become the dominant component. At TeV energies, muons travel long distances, larger than several kilometers in the Antarctic ice~\cite{Chirkin:2004hz}. Light is constantly emitted along the track. The resulting long lever arm gives a good reconstruction performance with median angular resolution $\Delta\Psi<1\deg$. The absolute pointing accuracy of IceCube has been demonstrated to be $\lesssim0.2^\circ$~\cite{Aartsen:2013zka} via measurements of the effect of the Moon shadow on the background cosmic ray (CR) flux. 
 
-Charged-current interactions of electron or tau neutrinos, as well as neutral current interactions of any neutrino type, also produce \emph{cascade}-like events. These types of interactions produce almost spherically symmetric light emission, giving a median angular resolution of $\sim10^\circ$--$15^\circ$\cite{Aartsen:2017eiu}. Another topology is induced by very high energy charged-current $\nu_\tau+\bar{\nu}_\tau$ interactions with the tau lepton decaying to hadrons after traveling a distance $\simeq50~{\rm m}~(E_\tau/{\rm PeV})$, resulting in two cascades separated distinctly. Candidates of these \emph{double-cascade} events have been recently identified~\cite{Stachurska:2019wfb}. These event signatures are in general less useful for point-source studies, unless one is looking for extended emission of local sources. Moreover, the event rate for track-like vents greatly increases because neutrinos can interact far outside the detector prior to the detection of the secondary muon with IceCube.  
-
-The majority of the background for this event sample originates from CRs interacting with the atmosphere to produce showers of particles including atmospheric muons and neutrinos. The atmospheric muons from the Southern hemisphere are able to penetrate the ice and are detected as track-like events in IceCube at a rate orders of magnitude higher than the corresponding atmospheric neutrinos~\cite{Aartsen:2016nxy}. Almost all of the atmospheric muons from the Northern hemisphere are filtered out by the Earth. However, poorly-reconstructed atmospheric muons from the Southern sky create a significant background in the Northern hemisphere.
-Atmospheric neutrinos also produce muons from charged-current muon (anti-)neutrinos interactions, acting as an irreducible background in both hemispheres. 
-
-During the first three years of data included here, IceCube was incomplete and functioned with 40, 59, and 79 strings. For these years and also during the first year of data taking of the full detector (IC86), the event selection and reconstruction was updated until it stabilized in 2012, as detailed in Table.~\ref{tab:livetimes}. Seven years of tracks were previously analyzed to search for point sources~\cite{Aartsen:2016oji}. Subsequently, an eight-year sample of tracks from the Northern sky used for diffuse muon neutrino searches was also analyzed looking for point sources~\cite{Aartsen:2018ywr}. The aim of this work is to introduce a selection which unifies the event filtering adopted in these two past searches.
+Charged-current interactions of astrophysical electron or tau (anti-)neutrinos, as well as neutral current interactions of any neutrino type, primarily produce \emph{cascade}-like signal events with an almost spherically symmetric Cherenkov light emission, resulting in a median angular resolution of $\sim10^\circ$--$15^\circ$\cite{Aartsen:2017eiu}. Another topology is induced by very high energy charged-current $\nu_\tau+\bar{\nu}_\tau$ interactions with the tau lepton decaying to hadrons after traveling a distance $\simeq50~{\rm m}~(E_\tau/{\rm PeV})$, resulting in two consecutive cascades. Candidates of these \emph{double-cascade} events have been recently identified~\cite{Stachurska:2019wfb}. These signal event signatures are in general less useful for point-source studies, except in searches for soft neutrino sources in the Southern hemisphere~\cite{Aartsen:2019epb}, extended Galactic neutrino emission~\cite{Aartsen:2019epb}, and transient sources, such as $\gamma$-ray bursts~\cite{Aartsen:2016qcr}. Moreover, the event rate for track-like vents greatly increases because neutrinos can interact far outside the detector prior to the detection of the secondary muon with IceCube.  
 
 %%%%%%%%%%%%%%%%%
 \begin{table}[t]
 \centering
 \begin{ruledtabular}
-\begin{tabular}{cccccc}
+\begin{tabular}{lllccc}
 \multicolumn{6}{c}{Data Samples} \\[0.1cm]
-Period & Livetime& Events & Start & End & Ref.\\ 
-IC40 & 376.4{\rm d} & 36900 & 2008/04/06 & 2009/05/20 & \cite{Abbasi:2010rd} \\
-IC59 & 352.6{\rm d} & 107011 & 2009/05/20 & 2010/05/31 & \cite{Aartsen:2013uuv} \\
-IC79 & 316.0{\rm d} & 93133 & 2010/06/01 & 2011/05/13 & \cite{Schatto:2014kbj}  \\
-IC86-I & 332.9{\rm d} & 136244 & 2011/05/13 & 2012/05/15 & \cite{Aartsen:2014cva} \\
-IC86-II-VII & 2198.2{\rm d} & 760923 & 2012/04/26 & 2018/07/10 & \cite{Aartsen:2019fau}\\
+%\multicolumn{8}{c}{Event Comparison Between {\tt PSTracks 2019} and {\tt PSTracks 2020}} \\[0.1cm]
+Season & Start & End & Livetime & Events & Ref.\\ 
+IC40 & 2008/04/06 & 2009/05/20 & 376.4\,d&  36900 & \cite{Abbasi:2010rd} \\
+IC59 & 2009/05/20 & 2010/05/31 & 352.6\,d& 107011 &  \cite{Aartsen:2013uuv}\\
+IC79 & 2010/06/01 & 2011/05/13 & 316.0\,d&  93133 & \cite{Schatto:2014kbj}\\
+IC86-I & 2011/05/13 & 2012/05/15 & 332.9\,d & 136244 & \cite{Aartsen:2014cva} \\
+IC86-II & 2012/04/26\footnotemark & 2013/05/02 & 332.0\,d & 112858 & \cite{Aartsen:2019fau} \\
+IC86-III & 2013/05/02 & 2014/05/06 & 362.9\,d & 122541 &  \cite{Aartsen:2019fau}\\
+IC86-IV & 2014/04/10\footnotemark & 2015/05/18 & 370.7\,d& 127045 & \cite{Aartsen:2019fau}\\
+IC86-V & 2015/04/24\footnotemark & 2016/05/20 & 365.4\,d & 129312 & \cite{Aartsen:2019fau}\\
+IC86-VI & 2016/05/20 & 2017/05/18 & 357.3\,d& 123657 & \cite{Aartsen:2019fau}\\
+IC86-VII & 2017/05/18 & 2018/07/08 & 410.6\,d& 145750 & \cite{Aartsen:2019fau}\\
 \end{tabular}
+\footnotetext[1]{Start of test runs of new processing; remainder of this season began 2012/05/15}
+\footnotetext[2]{Start of test runs of new processing; remainder of this season began 2014/05/06}
+\footnotetext[3]{Start of test runs of new processing; remainder of this season began 2015/05/18}
 \end{ruledtabular}
-\caption[]{\MA{\it (To be updated.)} IceCube configuration, livetime, number of events, start and end date and published reference in which the sample selection is described.}\label{tab:livetimes}
+\caption[]{IceCube seasons with corresponding start and end dates, lifetime and total event numbers. We also indicate reference in which the sample selection is described in detail.}\label{tab:livetimes}
 \end{table}
 %%%%%%%%%%%%%%%%%
 
-In the following, the modeling of signal and background for both the
-through-going and starting track samples is described.  The event selection is
-briefly discussed and the performance of the event sample highlighted. For more
-detailed information, refer to \cite{Abbasi:2010rd}, \cite{Aartsen:2013uuv},
-and \cite{Aartsen:2014cva} for through-going muons and \cite{Aartsen:2016tpb}
-for starting tracks.
+The majority of the background of the {\tt PSTracks} sample originates from CRs interacting with the atmosphere to produce showers of particles including atmospheric muons and neutrinos. The atmospheric muons from the Southern hemisphere are able to penetrate the ice and are detected as track-like events in IceCube at a rate orders of magnitude higher than the corresponding atmospheric neutrinos~\cite{Aartsen:2016nxy}. Almost all of the atmospheric muons from the Northern hemisphere are filtered out by the Earth. However, poorly-reconstructed atmospheric muons from the Southern sky create a significant background in the Northern hemisphere.
+Atmospheric neutrinos also produce muons from charged-current muon (anti-)neutrinos interactions, acting as an irreducible background in both hemispheres. 
+
+This data release includes events that were observed during the last three years of the seven-year construction phase of the IceCube observatory. The corresponding data seasons are referred to as IC40, IC59, and IC79 in Table~\ref{tab:livetimes} corresponding to the partial number of detector strings. For these years and also during the first year of data taking of the full detector (IC86-I), the event selection and reconstruction was updated until it stabilized in 2012, as detailed in Table.~\ref{tab:livetimes}. In the following, we describe the modeling of signal and background for both the through-going and starting track samples.  The event selection is briefly discussed and the performance of the event sample highlighted. For more detailed information, refer to \cite{Abbasi:2010rd}, \cite{Aartsen:2013uuv}, and \cite{Aartsen:2014cva} for through-going muons and \cite{Aartsen:2016tpb} for starting tracks.
+
+
+%Seven years of tracks were previously analyzed to search for point sources~\cite{Aartsen:2016oji}. Subsequently, an eight-year sample of tracks from the Northern sky used for diffuse muon neutrino searches was also analyzed looking for point sources~\cite{Aartsen:2018ywr}. The aim of this work is to introduce a selection which unifies the event filtering adopted in these two past searches.
+
+%%%%%%%%%%%%%%%%%%
+%\begin{table}[t]
+%\centering
+%\begin{ruledtabular}
+%\begin{tabular}{cccccc}
+%\multicolumn{6}{c}{Data Samples} \\[0.1cm]
+%Period & Livetime& Events & Start & End & Ref.\\ 
+%IC40 & 376.4{\rm d} & 36900 & 2008/04/06 & 2009/05/20 & \cite{Abbasi:2010rd} \\
+%IC59 & 352.6{\rm d} & 107011 & 2009/05/20 & 2010/05/31 & \cite{Aartsen:2013uuv} \\
+%IC79 & 316.0{\rm d} & 93133 & 2010/06/01 & 2011/05/13 & \cite{Schatto:2014kbj}  \\
+%IC86-I & 332.9{\rm d} & 136244 & 2011/05/13 & 2012/05/15 & \cite{Aartsen:2014cva} \\
+%IC86-II-VII & \MA{2198.9}{\rm d} & \MA{761163} & 2012/04/26 & \MA{2018/07/08} & \cite{Aartsen:2019fau}\\
+%\end{tabular}
+%\end{ruledtabular}
+%\caption[]{\MA{\it (To be updated.)} IceCube configuration, livetime, number of events, start and end date and published reference in which the sample selection is described.}\label{tab:livetimes}
+%\end{table}
+%%%%%%%%%%%%%%%%%%
+
 
 %%%%%%%%%%%%%%%%%
 \begin{figure}[t]
 \centering
-\includegraphics[width=\linewidth]{IC86II_enDist.pdf}
-\caption[]{\MA{\it (To be updated.)} The distribution of events in one year of data for the final event selection as a function of reconstructed declination and estimated energy. The 90\% energy range for the data (black), as well as simulated astrophysical signal Monte-Carlo (MC) for an $E^{-2}$ and an $E^{-3}$ spectrum are shown in magenta and orange respectively as a guide for the relevant energy range of IceCube (from Ref.~\cite{Aartsen:2019fau}).}\label{fig:enDist}
+\includegraphics[width=\linewidth,viewport= 0 0 530 390, clip=true]{IC86II_enDist.pdf}
+\caption[]{The distribution of events in one year of data for the final event selection as a function of reconstructed declination and estimated energy. The 90\% energy range for the data (black), as well as simulated astrophysical signal Monte-Carlo (MC) for an $E^{-2}$ and an $E^{-3}$ spectrum are shown in magenta and orange respectively as a guide for the relevant energy range of IceCube (from Ref.~\cite{Aartsen:2019fau}).}\label{fig:enDist}
 \end{figure}
 %%%%%%%%%%%%%%%%%
 
-\section{Event Selection}
+\section{Event Selection}\label{secII}
 
-Different criteria are applied to select track-like events from the Northern and Southern hemisphere (with a boundary between them at declination $\delta=-5^\circ$), because the background differs in these two regions. Almost all the atmospheric muons in the Northern hemisphere can be removed by selecting high-quality track-like events. In the Southern hemisphere, the atmospheric background is reduced by strict cuts on the reconstruction quality and minimum energy, since the astrophysical neutrino fluxes are expected to have a harder energy spectrum than the background of atmospheric muons and neutrinos. This effectively removes almost all Southern hemisphere events with an estimated energy below $\simeq10$~TeV; see Fig.~\ref{fig:enDist}. 
-
-In both hemispheres, atmospheric muons and cascade events are further filtered using multi-variate Boosted Decision Trees (BDT). In the analysis~\cite{Aartsen:2019fau}, a single BDT is trained to recognize three classes of events in the Northern hemisphere: single muon tracks from atmospheric and astrophysical neutrinos, atmospheric muons, and cascades, where neutrino-induced tracks are treated as signal. This BDT uses 11 variables related to event topology and reconstruction quality. The Northern BDT preserves $\sim90\%$ of the atmospheric neutrinos and $\sim0.1\%$ of the atmospheric muons from the initial selection of track-like events, also applied in previous muon neutrino searches~\cite{Aartsen:2016oji,Aartsen:2018ywr}. In the Southern hemisphere, the BDT and selection filters are taken from Ref.~\cite{Aartsen:2016oji}. The final all-sky event rate of $\sim2$~mHz is dominated by muons from atmospheric neutrinos in the Northern hemisphere and by high-energy, well-reconstructed muons in the Southern hemisphere. This updated selection applied to the final 6 years of data shown in Table~\ref{tab:livetimes}. The preceding four years of data are handled exactly as in the past.
+The event selection of track-like events applies different criteria in the Northern and Southern hemisphere -- corresponding to events originating below (``up-going'') and above (``down-going'') the IceCube detector, respectively -- with different atmospheric backgrounds. The boundary between the hemispheres is at declination $\delta=-5^\circ$, which is identical to a zenith angle of $95^\circ$ for the special location of IceCube. Almost all the atmospheric muons in the Northern hemisphere can be removed by selecting high-quality track-like events. In the Southern hemisphere, the atmospheric background is reduced by strict cuts on the reconstruction quality and minimum energy, since the astrophysical neutrino fluxes are expected to have a harder energy spectrum than the background of atmospheric muons and neutrinos. This effectively removes almost all Southern hemisphere events with an estimated energy below $\simeq10$~TeV; see Fig.~\ref{fig:enDist}. 
 
 %%%%%%%%%%%%%%%%%
-\begin{figure}[t]
+\begin{figure*}[t]
 \centering
-\includegraphics[width=\linewidth]{IC86II_effA.pdf}
-\caption[]{\MA{\it (To be updated.)} The effective area as a function of neutrino energy for the IC86-II-VII event selection averaged across the declination band for several declination bins using simulated data (from Ref.~\cite{Aartsen:2019fau}).}\label{fig:effA}
-\end{figure}
+\includegraphics[width=0.51\linewidth,viewport= 20 20 500 330, clip=true]{IC86II_effA.pdf}\hfill\includegraphics[width=0.48\linewidth,viewport= 0 0 480 310, clip=true]{IC86II_PSF.pdf}
+\caption[]{{\bf Left:} The effective area as a function of neutrino energy for the IC86-II-VII event selection averaged across the declination band for several declination bins using simulated data. {\bf Right:} The median angle between simulated neutrino and reconstructed muon directions as a function of energy. (Figures from Ref.~\cite{Aartsen:2019fau})}\label{fig:effAand PSF}
+\end{figure*}
 %%%%%%%%%%%%%%%%%
 
-%%%%%%%%%%%%%%%%%
-\begin{figure}[t]
-\centering
-\includegraphics[width=\linewidth]{IC86II_PSF.pdf}
-\caption[]{\MA{\it (To be updated.)} The median angle between simulated neutrino and reconstructed muon directions as a function of energy (from Ref.~\cite{Aartsen:2019fau}).}\label{fig:PSF}
-\end{figure}
-%%%%%%%%%%%%%%%%%
+The main data seasons IC86-II to IC86-VII use multi-variate Boosted Decision Trees (BDT) to reduce the background of atmospheric muons and cascade events. In the Northern hemisphere, a single BDT is trained to recognize three classes of events: single muon tracks from atmospheric and astrophysical neutrinos, atmospheric muons, and cascades; neutrino-induced tracks are treated as signal. This BDT uses 11 variables related to event topology and reconstruction quality. The Northern BDT preserves $\sim90\%$ of the atmospheric neutrinos and $\sim0.1\%$ of the atmospheric muons from the initial selection of track-like events~\cite{Aartsen:2016oji,Aartsen:2018ywr,Aartsen:2019fau}. In the Southern hemisphere, BDTs are used to select only the best-reconstructed track-like events at the highest energies. In addition, the BDT uses four variables related to deposited energy along the track, as well as the light-arrival time of photons at the DOMs~\cite{Aartsen:2014cva,Aartsen:2016oji}. The large backgrounds of atmospheric muons and muon bundles require harsh cuts to reduce their rate significantly, resulting in an effective selection of only very high energy events. The IceTop surface array is also used as an active veto against coincident air-shower events for vertically down-going events. The final all-sky event rate of $\sim2$~mHz is dominated by muons from atmospheric neutrinos in the Northern hemisphere and by high-energy, well-reconstructed muons in the Southern hemisphere. The preceding four years of data are handled exactly as in the past~\cite{Abbasi:2010rd,Aartsen:2013uuv,Schatto:2014kbj,Aartsen:2014cva}.
 
-\section{Detector Response}
+
+%%%%%%%%%%%%%%%%%%
+%\begin{figure}[t]
+%\centering
+%\includegraphics[width=\linewidth]{IC86II_PSF.pdf}
+%\caption[]{\MA{\it (To be updated.)} The median angle between simulated neutrino and reconstructed muon directions as a function of energy (from Ref.~\cite{Aartsen:2019fau}).}\label{fig:PSF}
+%\end{figure}
+%%%%%%%%%%%%%%%%%%
+
+\section{Detector Response}\label{secIII}
 
 Muon tracks induced by astrophysical neutrino interactions are the main signal category in the search for point-like sources of neutrinos. Detailed Monte Carlo simulation is used to evaluate the response of IceCube to such events and distinguish them from atmospheric backgrounds. The median angular resolution $\Delta\Psi$ and the event rate expectation
 \begin{align}\label{eq:ev_rate}
@@ -129,17 +154,19 @@ Muon tracks induced by astrophysical neutrino interactions are the main signal c
 \end{align}
 given by the detector \emph{effective area} $A_\mathrm{eff}$ and the incident neutrino flux $\nu_\nu$ can be derived from the simulation; see \cite{Aartsen:2016xlq}.
 
-\section{Comparison to Previous Releases}
+\section{Comparison to Previous Releases}\label{secIV}
 
-There have been multiple previous IceCube data releases selecting for track-like events in the Northern and Southern hemisphere, primarily for the purpose of neutrino astronomy ~\cite{Abbasi:2010rd,Aartsen:2013uuv,IceCube:2018,IceCube:2019,IceCube:TXS2018}. The dataset detailed in this document is the newest such attempt at creating a sample of track-like events, with the goal of standardizing the IC86 II-VII data taking period. This dataset can be considered to be a successor to the previous data release~\cite{IceCube:2019}, providing an updated description of the data from 2012--2016, as well as adding three additional years of data in 2016--2018. 
+There have been multiple previous IceCube data releases selecting for track-like events in the Northern and Southern hemisphere, primarily for the purpose of neutrino astronomy ~\cite{Abbasi:2010rd,Aartsen:2013uuv,IceCube:2018,IceCube:2019,IceCube:TXS2018}. The dataset detailed in this document is the newest such attempt at creating a sample of track-like events, with the goal of standardizing the IC86 II-VII data taking period. %This dataset can be considered to be a successor to the previous data release~\cite{IceCube:2019}, providing an updated description of the data from 2012--2016, as well as adding three additional years of data in 2016--2018. 
+\MA{This dataset can be considered to be a successor of the previous data releases~\cite{IC40data,IC59data,IceCube:2018}, providing an updated description of the data from 2010--2012~\cite{IceCube:2018}, as well as adding six additional years of data in 2012--2018.} 
 
-While similar  to the data release~\cite{IceCube:2019}, this sample includes several improvements in addition to the aforementioned standardization of the IC86 data taking periods. In this version of the data sample, the angular reconstruction has been improved, and the event classifier and sample pre-cuts have been altered to better reject cascade-like events and accept track-like events. The net effect of the sample changes is an increase in event rate relative to previous versions of the sample. A year-by-year comparison of event counts between the older and newer versions of this sample can be seen in Table ~\ref{tab:v2v3evtcontent}.
+%While similar to the data release~\cite{IceCube:2019}, 
+\MA{This sample includes several improvements in addition to the aforementioned standardization of the IC86 data taking periods published in Ref.~\cite{IceCube:2018}.} In this version of the data sample, the angular reconstruction has been improved, and the event classifier and sample pre-cuts have been altered to better reject cascade-like events and accept track-like events. The net effect of the sample changes is an increase in event rate relative to previous versions of the sample. A year-by-year comparison of event counts between the older \MA{({\tt PSTracks v2})} and newer \MA{({\tt PSTracks v3})} versions of this sample can be seen in Table~\ref{tab:v2v3evtcontent}.
 
 As an example of how the changing content of the different versions of this data sample can affect the process of searching for hotspots in IceCube data, we examine the 2014/2015 neutrino flare associated with TXS 0506+056~\cite{IceCube:2018cha}. The $3.5 \sigma$ excess seen in 2014/2015~\cite{IceCube:2018cha} was identified using the data sample corresponding to the data release~\cite{IceCube:2019}. Here, we repeat the untriggered flare search analysis of ~\cite{IceCube:2018cha}, but instead use the newest data sample presented in this document. The results of this cross-check can be seen in Table~\ref{tab:TXSCrossChecks}. Notably, the significance of the 2014/2015 neutrino flare appears to have decreased from $p=7.0 \times 10^{-5}$ to $p=8.1 \times 10^{-3}$ when using the most recent version of the data sample. A comparison of the reconstructed parameters of the most signal-like neutrino events contributing to the 2014/2015 flare in both versions of the data sample can be seen in Table~\ref{tab:TXSFlareEvtsTable} and Figure~\ref{fig:TXSEvtsCompare}.
 
 The lower significance of the 2014/2015 neutrino flare in the most recent version of the sample appears to have been caused by the presence of two cascade-like events, occurring at MJD=56992.1586 and MJD=57014.1910, that existed in the data sample~\cite{IceCube:2019} associated with Ref.~\cite{IceCube:2018cha}, but have been removed from the data sample presented in this document. These two events did not pass a track length pre-cut that was introduced in the newest version of this data sample, requiring that all northern-sky events have a reconstructed track length greater than 200 meters. This pre-cut is intended to filter out poorly localized cascade events prior to applying the BDT. Performing the untriggered flare search using an older version of the sample (Ref.~\cite{IceCube:2019}), but with the two cascade events manually removed seems to result in a drop in significance similar to that which is observed when using this sample, as seen in Table~\ref{tab:TXSCrossChecks}. The drop in significance cannot be otherwise adequately explained by changes to the angular reconstruction of events between the two versions of the sample. 
 
- It should be noted that the apparent drop in significance of the 2014/2015 neutrino flare is not entirely unprecedented. A drop in the time integrated significance of TXS 0506+056 is also seen in Ref.~\cite{Aartsen:2019fau} when using the newer version of this sample: $p=2 \times 10^{-5}$ ($4.1\sigma$) with {\tt PSTracks 2019} ~\cite{IceCube:2018cha}, and $p=1.9 \times 10^{-4}$ ($3.5\sigma$) with {\tt PSTracks 2020} ~\cite{Aartsen:2019fau}. While both the time integrated and untriggered flare results associated with TXS 0506+056 appear to be less significant when using the newer version of this data sample, it is important to recognize that the results presented here are all \textit{a posteriori} cross checks preformed in order to explore the effects of the altered content of {\tt PSTracks 2020} in comparison to previous versions. The results of these checks are not intended to supersede the results shown in Ref.~\cite{IceCube:2018cha}.
+ It should be noted that the apparent drop in significance of the 2014/2015 neutrino flare is not entirely unprecedented. A drop in the time integrated significance of TXS 0506+056 is also seen in Ref.~\cite{Aartsen:2019fau} when using the newer version of this sample: $p=2 \times 10^{-5}$ ($4.1\sigma$) with \MA{\tt PSTracks v2} ~\cite{IceCube:2018cha}, and $p=1.9 \times 10^{-4}$ ($3.5\sigma$) with \MA{\tt PSTracks v3} ~\cite{Aartsen:2019fau}. While both the time integrated and untriggered flare results associated with TXS 0506+056 appear to be less significant when using the newer version of this data sample, it is important to recognize that the results presented here are all \textit{a posteriori} cross checks preformed in order to explore the effects of the altered content of \MA{\tt PSTracks v3} in comparison to previous versions. The results of these checks are not intended to supersede the results shown in Ref.~\cite{IceCube:2018cha}.
 
 \begin{figure*}[p]
 \centering
@@ -153,31 +180,31 @@ The lower significance of the 2014/2015 neutrino flare in the most recent versio
 %  \label{fig:test2}
 %\end{minipage}
  \includegraphics[width=.45\linewidth]{./TXSCheckPlots/PSTracksv2evtplot.pdf}\hspace{0.2in}\includegraphics[width=.45\linewidth]{./TXSCheckPlots/PSTracksv3evtplot.pdf}
-\caption[]{The top 14 most signal-like flare events contributing to the 2014/2015 neutrino flare associated with TXS 0506+056 (black ``$\times$''), both in {\tt PSTracks 2019} (left, used for the analysis published in Ref ~\cite{IceCube:2018cha}), and the updated sample presented in this document (right). The size of the colored circles corresponds to the $1\sigma$ containment region of the angular reconstruction of that event, and the color of the circle corresponds to the reconstructed energy proxy.}\label{fig:TXSEvtsCompare}
+\caption[]{The top 14 most signal-like flare events contributing to the 2014/2015 neutrino flare associated with TXS 0506+056 (black ``$\times$''), both in \MA{\tt PSTracks v2} (left, used for the analysis published in Ref ~\cite{IceCube:2018cha}), and the updated sample presented in this document (right). The size of the colored circles corresponds to the $1\sigma$ containment region of the angular reconstruction of that event, and the color of the circle corresponds to the reconstructed energy proxy.}\label{fig:TXSEvtsCompare}
 \end{figure*}
 
 \begin{table*}[p]
 \centering
 \begin{ruledtabular}
-\begin{tabular}{ccccp{2cm}p{2cm}p{2cm}p{2cm}}
-\multicolumn{8}{c}{Event Comparison Between {\tt PSTracks 2019} and {\tt PSTracks 2020}} \\[0.1cm]
-Season & Start & End & Livetime (d) & {\tt PSTracks 2019} Events & {\tt PSTracks 2020} Events & 2019$\rightarrow$2020 Overlap & 2020$\rightarrow$2019 Overlap \\ 
-IC40 & 2008/04/06 & 2009/05/20 & 376.4 & 36900 & 36900 & 100\% & 100\% \\
-IC59 & 2009/05/20 & 2010/05/31 & 352.6 & 107011 & 107011 & 100\% & 100\% \\
-IC79 & 2010/06/01 & 2011/05/13 & 316.0 & 93133 & 93133 & 100\% & 100\% \\
-IC86-I & 2011/05/13 & 2012/05/15 & 332.9 & 136244 & 136244 & 100\% & 100\% \\
-IC86-II & 2012/04/26\footnotemark & 2013/05/02 & 332.0 & 105300 & 112858 & 88.0\% & 82.1\% \\
-IC86-III & 2013/05/02 & 2014/05/06 & 362.9 & 114834 & 122541 & 87.8\% & 82.3\% \\
-IC86-IV & 2014/04/10\footnotemark & 2015/05/18 & 370.7 & 118456 & 127045 & 87.9\% & 82.0\% \\
-IC86-V & 2015/04/24\footnotemark & 2016/05/20 & 365.4 & - & 129312 & - & - \\
-IC86-VI & 2016/05/20 & 2017/05/18 & 357.3 & - & 123657 & - & - \\
-IC86-VII & 2017/05/18 & 2018/07/08 & 410.6 & - & 145750 & - & - \\
+\begin{tabular}{lllccccc}
+\multicolumn{8}{c}{Event Comparison Between \MA{\tt PSTracks~v2} and \MA{\tt PSTracks~v3}} \\[0.1cm]
+Season & Start & End & Livetime & \MA{\tt PSTracks v2} & \MA{\tt PSTracks v3} & {\tt v2}$\rightarrow${\tt v3} Overlap & {\tt v3}$\rightarrow${\tt v2} Overlap \\ 
+%IC40 & 2008/04/06 & 2009/05/20 & 376.4 & 36900 & 36900 & 100\% & 100\% \\
+%IC59 & 2009/05/20 & 2010/05/31 & 352.6 & 107011 & 107011 & 100\% & 100\% \\
+%IC79 & 2010/06/01 & 2011/05/13 & 316.0 & 93133 & 93133 & 100\% & 100\% \\
+%IC86-I & 2011/05/13 & 2012/05/15 & 332.9 & 136244 & 136244 & 100\% & 100\% \\
+IC86-II & 2012/04/26\footnotemark & 2013/05/02 & 332.0d & 105300 & 112858 & 88.0\% & 82.1\% \\
+IC86-III & 2013/05/02 & 2014/05/06 & 362.9d & 114834 & 122541 & 87.8\% & 82.3\% \\
+IC86-IV & 2014/04/10\footnotemark & 2015/05/18 & 370.7d & 118456 & 127045 & 87.9\% & 82.0\% \\
+%IC86-V & 2015/04/24\footnotemark & 2016/05/20 & 365.4 & - & 129312 & - & - \\
+%IC86-VI & 2016/05/20 & 2017/05/18 & 357.3 & - & 123657 & - & - \\
+%IC86-VII & 2017/05/18 & 2018/07/08 & 410.6 & - & 145750 & - & - \\
 \end{tabular}
 \footnotetext[1]{Start date for test runs of the new processing. The remainder of this season began 2012/05/15}
 \footnotetext[2]{Start date for test runs of the new processing. The remainder of this season began 2014/05/06}
-\footnotetext[2]{Start date for test runs of the new processing. The remainder of this season began 2015/05/18}
+%\footnotetext[3]{Start date for test runs of the new processing. The remainder of this season began 2015/05/18}
 \end{ruledtabular}
-\caption[]{A comparison of the sample content between {\tt PSTracks 2019} and {\tt PSTracks 2020}. The rightmost two columns report the overlap in event content between the old and new versions of the samples for periods of shared livetime. "2019$\rightarrow$2020" refers to the percentage of events in {\tt PSTracks 2019} that are also in {\tt PSTracks 2020}, and "2020$\rightarrow$2019" is the reverse. The 2019 version of the sample has been discontinued as of the IC86-2015 season, having been replaced by the 2020 version. Seasons prior to IC86-II are identical between the two versions of the sample, and seasons after IC86-IV only exist for the 2020 version of the sample.}\label{tab:v2v3evtcontent}
+\caption[]{A comparison of the sample content between \MA{\tt PSTracks v2} and \MA{\tt PSTracks v3}. The rightmost two columns report the overlap in event content between the old and new versions of the samples for periods of shared livetime. \MA{The entry ``{\tt v2}$\rightarrow${\tt v3}''} refers to the percentage of events in {\tt PSTracks 2019} that are also in \MA{\tt PSTracks v2}, and \MA{``{\tt v3}$\rightarrow${\tt v2}''} is the reverse. The \MA{older} version of the sample has been discontinued as of the IC86-2015 season, having been replaced by \MA{\tt PSTracks v3}. Seasons prior to IC86-II are identical between the two versions of the sample, and seasons after IC86-IV only exist for the \MA{newer} version of the sample.}\label{tab:v2v3evtcontent}
 \end{table*}
 
 \begin{table*}[p]
@@ -185,10 +212,10 @@ IC86-VII & 2017/05/18 & 2018/07/08 & 410.6 & - & 145750 & - & - \\
 \begin{ruledtabular}
 \begin{tabular}{cccccc}
 \multicolumn{6}{c}{Untriggered Flare Cross-check Results} \\[0.1cm]
-Sample & p-value (pre-trial) & $T_{start}$ & $T_{stop}$ & $n_s$ & $\gamma$ \\ 
-{\tt PSTracks} 2019~\cite{IceCube:2018cha,IceCube:2019} & 7.0e-5 & 56937.81 & 57096.22 & 14.39 & 2.20  \\
-{\tt PSTracks} 2019 w/o cascades & 1.17e-3 & 56937.81 & 57112.65 & 12.22 & 2.26 \\
-{\tt PSTracks} 2020 (this release) & 8.14e-3 & 56927.86 & 57116.76 & 11.87 & 2.22\\
+Sample & p-value (pre-trial) & $T_\text{start}$ & $T_\text{stop}$ & $n_s$ & $\gamma$ \\ 
+\MA{\tt PSTracks v2}~\cite{IceCube:2018cha,IceCube:2019} & 7.0e-5 & 56937.81 & 57096.22 & 14.39 & 2.20  \\
+\MA{\tt PSTracks v2} w/o cascades & 1.17e-3 & 56937.81 & 57112.65 & 12.22 & 2.26 \\
+\MA{\tt PSTracks v3} (this release) & 8.14e-3 & 56927.86 & 57116.76 & 11.87 & 2.22\\
 \end{tabular}
 \end{ruledtabular}
 \caption[]{The results of repeating the untriggered flare analysis preformed in ~\cite{IceCube:2018cha}, but using the dataset presented in this document in place of {\tt PSTracks 2019} ~\cite{IceCube:2019}, the dataset that was originally used. The apparent drop in significance when using this sample versus the older sample can be explained by events present in the older sample that have been removed from the newer sample presented here.}\label{tab:TXSCrossChecks}
@@ -199,9 +226,9 @@ Sample & p-value (pre-trial) & $T_{start}$ & $T_{stop}$ & $n_s$ & $\gamma$ \\
 \begin{ruledtabular}
 \begin{tabular}{c|cccc|cccc}
 \multicolumn{1}{c|}{} &
-\multicolumn{4}{c|}{{\tt PSTracks} 2019~\cite{IceCube:2018cha,IceCube:2019}} & 
-\multicolumn{4}{c}{{\tt PSTracks} 2020 (this release)}\\[0.1cm]
-MJD & RA (deg) & Dec (deg) & $\sigma$ (deg) & $\log(E/GeV)$ & RA (deg) & Dec (deg) & $\sigma$ (deg) & $\log(E/GeV)$\\ 
+\multicolumn{4}{c|}{\MA{\tt PSTracks v2}~\cite{IceCube:2018cha,IceCube:2019}} & 
+\multicolumn{4}{c}{\MA{\tt PSTracks v3} (this release)}\\[0.1cm]
+MJD & RA (deg) & Dec (deg) & $\sigma$ (deg) & $\log_{10}(E/{\rm GeV})$ & RA (deg) & Dec (deg) & $\sigma$ (deg) & $\log_{10}(E/{\rm GeV})$\\ 
 \hline
 56940.9084 & 77.55 & 5.40 & 0.20 & 3.97 & 77.35 & 5.42 & 0.20 & 3.97\\
 57009.5301 & 77.28 & 5.54 & 0.38 & 3.91 & 77.32 & 5.50 & 0.34 & 3.91\\
