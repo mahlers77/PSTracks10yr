@@ -11,6 +11,8 @@
 \usepackage[normalem]{ulem}
 \usepackage{float}
 
+\usepackage[caption=false]{subfig}
+
 \usepackage{lineno}
 \linenumbers
 
@@ -128,10 +130,33 @@ This data release includes events that were observed during the last three years
 The event selection of track-like events applies different criteria in the Northern and Southern hemisphere -- corresponding to events originating below (``up-going'') and above (``down-going'') the IceCube detector, respectively -- with different atmospheric backgrounds. The boundary between the hemispheres is at declination $\delta=-5^\circ$, which is identical to a zenith angle of $95^\circ$ for the special location of IceCube. Almost all the atmospheric muons in the Northern hemisphere can be removed by selecting high-quality track-like events. In the Southern hemisphere, the atmospheric background is reduced by strict cuts on the reconstruction quality and minimum energy, since the astrophysical neutrino fluxes are expected to have a harder energy spectrum than the background of atmospheric muons and neutrinos. This effectively removes almost all Southern hemisphere events with an estimated energy below $\simeq10$~TeV; see Fig.~\ref{fig:enDist}. 
 
 %%%%%%%%%%%%%%%%%
+%\begin{figure*}[t]
+%\centering
+%\includegraphics[width=0.51\linewidth,viewport= 20 20 500 330, %clip=true]{IC86II_effA.pdf}\hfill\includegraphics[width=0.48\linewidth,viewport= 0 0 480 310, %clip=true]{IC86II_PSF.pdf}
+%\caption[]{{\bf Left:} The effective area as a function of neutrino energy for the IC86-II-VII %event selection averaged across the declination band for several declination bins using simulated %data. {\bf Right:} The median angle between simulated neutrino and reconstructed muon directions %as a function of energy. (Figures from Ref.~\cite{Aartsen:2019fau})}\label{fig:effAand PSF}
+%\end{figure*}
+%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%
 \begin{figure*}[t]
 \centering
-\includegraphics[width=0.51\linewidth,viewport= 20 20 500 330, clip=true]{IC86II_effA.pdf}\hfill\includegraphics[width=0.48\linewidth,viewport= 0 0 480 310, clip=true]{IC86II_PSF.pdf}
-\caption[]{{\bf Left:} The effective area as a function of neutrino energy for the IC86-II-VII event selection averaged across the declination band for several declination bins using simulated data. {\bf Right:} The median angle between simulated neutrino and reconstructed muon directions as a function of energy. (Figures from Ref.~\cite{Aartsen:2019fau})}\label{fig:effAand PSF}
+\includegraphics[width=0.48\linewidth,clip=true]{IC86II_PSF.pdf}
+\caption[]{The median angle between simulated neutrino and reconstructed muon directions 
+as a function of energy. (Figures from Ref.~\cite{Aartsen:2019fau})}\label{fig:PSF}
+\end{figure*}
+%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%
+\begin{figure*}[t]
+\subfloat[IC40]{\includegraphics[scale=0.5]{PSTracksRelease/PublicReleasePlots/EffectiveAreaPlots/IC40_effectiveArea.pdf}}
+\hfill
+\subfloat[IC59]{\includegraphics[scale=0.5]{PSTracksRelease/PublicReleasePlots/EffectiveAreaPlots/IC59_effectiveArea.pdf}}
+\subfloat[IC79]{\includegraphics[scale=0.5]{PSTracksRelease/PublicReleasePlots/EffectiveAreaPlots/IC79_effectiveArea.pdf}}
+\hfill
+\subfloat[IC86-I]{\includegraphics[scale=0.5]{PSTracksRelease/PublicReleasePlots/EffectiveAreaPlots/IC86_2011_effectiveArea.pdf}}
+\subfloat[IC86-II-VII]{\includegraphics[scale=0.5]{PSTracksRelease/PublicReleasePlots/EffectiveAreaPlots/IC86_2012_effectiveArea.pdf}}
+
+\caption{The effective areas for each uniform data-taking period included in the current data release. IC40 through IC79 used the partially-completed detector while IC86-I and later followed detector completion. Software and calibration differences separate IC86-I from later years. Differences in the tools and applied selection have a small, but important impact on the sample for each period.}\label{fig:effA}
 \end{figure*}
 %%%%%%%%%%%%%%%%%
 
