@@ -9,9 +9,10 @@
 \usepackage{enumerate}
 \usepackage{xfrac}
 \usepackage[normalem]{ulem}
+%\usepackage{subcaption}
 \usepackage{float}
 
-\usepackage[caption=false]{subfig}
+%\usepackage[caption=false]{subfig}
 
 \usepackage{lineno}
 \linenumbers
@@ -147,14 +148,29 @@ as a function of energy. (Figures from Ref.~\cite{Aartsen:2019fau})}\label{fig:P
 %%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%
-\begin{figure*}[t]
-\subfloat[IC40]{\includegraphics[scale=0.5]{PSTracksRelease/PublicReleasePlots/EffectiveAreaPlots/IC40_effectiveArea.pdf}}
-\hfill
-\subfloat[IC59]{\includegraphics[scale=0.5]{PSTracksRelease/PublicReleasePlots/EffectiveAreaPlots/IC59_effectiveArea.pdf}}
-\subfloat[IC79]{\includegraphics[scale=0.5]{PSTracksRelease/PublicReleasePlots/EffectiveAreaPlots/IC79_effectiveArea.pdf}}
-\hfill
-\subfloat[IC86-I]{\includegraphics[scale=0.5]{PSTracksRelease/PublicReleasePlots/EffectiveAreaPlots/IC86_2011_effectiveArea.pdf}}
-\subfloat[IC86-II-VII]{\includegraphics[scale=0.5]{PSTracksRelease/PublicReleasePlots/EffectiveAreaPlots/IC86_2012_effectiveArea.pdf}}
+\begin{figure*}[t]\centering
+\begin{minipage}[c][6.5cm][c]{0.49\textwidth}\centering
+{(a)}\\\includegraphics[width=\linewidth]{./PublicReleasePlots/EffectiveAreaPlots/IC40_effectiveArea.pdf}
+\end{minipage}
+\begin{minipage}[c][6.5cm][c]{0.49\textwidth}\centering
+{(b)}\\\includegraphics[width=\linewidth]{./PublicReleasePlots/EffectiveAreaPlots/IC59_effectiveArea.pdf}
+\end{minipage}\\
+\begin{minipage}[c][6.5cm][c]{0.49\textwidth}\centering
+{(c)}\\\includegraphics[width=\linewidth]{./PublicReleasePlots/EffectiveAreaPlots/IC79_effectiveArea.pdf}
+\end{minipage}
+\begin{minipage}[c][6.5cm][c]{0.49\textwidth}\centering
+{(d)}\\\includegraphics[width=\linewidth]{./PublicReleasePlots/EffectiveAreaPlots/IC86_2011_effectiveArea.pdf}
+\end{minipage}\\
+\begin{minipage}[c][6.5cm][c]{0.49\textwidth}\centering
+{(e)}\\\includegraphics[width=\linewidth]{./PublicReleasePlots/EffectiveAreaPlots/IC86_2012_effectiveArea.pdf}
+\end{minipage}
+%\subfloat[IC40]{\includegraphics[scale=0.5]{./PublicReleasePlots/EffectiveAreaPlots/IC40_effectiveArea.pdf}}
+%\hfill
+%\subfloat[IC59]{\includegraphics[scale=0.5]{./PublicReleasePlots/EffectiveAreaPlots/IC59_effectiveArea.pdf}}
+%\subfloat[IC79]{\includegraphics[scale=0.5]{./PublicReleasePlots/EffectiveAreaPlots/IC79_effectiveArea.pdf}}
+%\hfill
+%\subfloat[IC86-I]{\includegraphics[scale=0.5]{./PublicReleasePlots/EffectiveAreaPlots/IC86_2011_effectiveArea.pdf}}
+%\subfloat[IC86-II-VII]{\includegraphics[scale=0.5]{./PublicReleasePlots/EffectiveAreaPlots/IC86_2012_effectiveArea.pdf}}
 
 \caption{The effective areas for each uniform data-taking period included in the current data release. IC40 through IC79 used the partially-completed detector while IC86-I and later followed detector completion. Software and calibration differences separate IC86-I from later years. Differences in the tools and applied selection have a small, but important impact on the sample for each period.}\label{fig:effA}
 \end{figure*}
